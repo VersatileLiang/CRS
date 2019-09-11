@@ -33,7 +33,7 @@ CRS/ # 根目录
     images/ # 图片文件夹
     bootstrap/ # bootstrap文件夹
     jquery/
-    css/
+    style/
     layer/
     layui/
 ▾ admin/ # 管理员app
