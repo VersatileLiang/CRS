@@ -30,34 +30,34 @@ CRS/ # 根目录
 ▾ CarrierRecognitionSystem/ # Django的配置文件
     urls.py # 路径配置文件
 ▾ static/ # 静态资源文件
-    images/ # 图片文件夹
-    bootstrap/ # bootstrap文件夹
-    jquery/
-    style/
-    layer/
-    layui/
-▾ admin/ # 管理员app
+    ▾images/ # 图片文件夹
+    ▾bootstrap/ # bootstrap文件夹
+    ▾jquery/
+    ▾style/
+    ▾layer/
+    ▾layui/
+▾ index/ # 主页app
     __init__.py
     ....
 
-▾ login/
+▾ login/ # 登录app
     __init__.py
     ......
 
 
-▾ reptile/
+▾ reptile/ # 爬虫app
     __init__.py
     ....
 
-▾ sign/
+▾ sign/ # 标记app
     __init__.py
     ......
 
-▾ classification/
+▾ classification/ # 分类app
     __init__.py
     .......
 
-▾ algorithm/
+▾ algorithm/ # 算法app
     __init__.py
     ..........
 
