@@ -5,5 +5,5 @@ import login.views
 urlpatterns = [
     path('login/',login.views.login,),
     path('',login.views.login,),
-    path('user_login/', login.views.login_success, ),
+    path('login_success/', login.views.login_success, ),
 ]
