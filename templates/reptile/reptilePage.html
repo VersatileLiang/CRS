@@ -24,13 +24,7 @@
   </ul>
   
   <div class="center" style="width: 1200px; height: 500px;margin: 0 auto;">
-    <form class="layui-form" action="" style="width: 500px; margin: 0 auto; margin-top: 100px" >
-      <div class="layui-form-item">
-        <label class="layui-form-label">时间</label>
-        <div class="layui-input-block">
-          <input type="text" name="time" required  lay-verify="required" placeholder="显示时间" autocomplete="off" class="layui-input">
-        </div>
-      </div>
+    <form class="layui-form" method="post" action="/reptile/reptile" style="width: 500px; margin: 0 auto; margin-top: 100px" >
       <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">数据源</label>
         <div class="layui-input-block">
@@ -39,37 +33,12 @@
       </div>
       <div class="layui-form-item">
         <div class="layui-input-block">
-          <button class="layui-btn" lay-submit lay-filter="formDemo">启动</button>
+          <button class="layui-btn" lay-submit lay-filter="formDemo" type="submit">启动</button>
           <button type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
       </div>
     </form>
   </div>
-
-  
- 
-<script>
-//注意：导航 依赖 element 模块，否则无法进行功能性操作
-layui.use('element', function(){
-  var element = layui.element;
-  
-  //…
-});
-
-//Demo
-layui.use('form', function(){
-  var form = layui.form;
-  
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-    layer.msg(JSON.stringify(data.field));
-    return false;
-  });
-});
-
-</script>
-
-
 </body>
 </html>
       

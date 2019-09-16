@@ -5,4 +5,9 @@ def login(request):
     return render(request, 'login/login.html')
 
 def login_success(request):
-    return render(request, 'index.html')
+    name=request.POST.get("name")
+    password=request.POST.get("password")
+    if(name=="admin"):
+        if(password=="admin"):
+            return render(request, 'reptile/reptilePage.html')
+

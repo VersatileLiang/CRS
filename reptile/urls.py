@@ -4,4 +4,5 @@ import reptile.views
 
 urlpatterns = [
     path('',reptile.views.index,),
+    path('reptile', reptile.views.reptile)
 ]
