@@ -5,6 +5,8 @@ from urllib import error
 from bs4 import BeautifulSoup
 import os
 
+from CarrierRecognitionSystem import settings
+
 num = 0
 numPicture = 0
 file = ''
@@ -20,7 +22,7 @@ def reptile(request):
     # Recommend = recommend(url)  # 记录相关推荐
     # print('经过检测%s类图片共有%d张' % (word, tot))
     numPicture =20
-    file ='E:/PycharmProjects/CRS/static/images'
+    file =os.path.join(settings.BASE_DIR, 'static/images')
     y = os.path.exists(file)
     t = 0
     tmp = url

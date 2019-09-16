@@ -7,6 +7,8 @@ from django.shortcuts import render
 import shutil
 import requests
 # Create your views here.
+from CarrierRecognitionSystem import settings
+
 
 def index(request):
     i = 0
@@ -19,7 +21,7 @@ def index(request):
             print('OSError, Path:', imgpath)
     return render(request, 'sign/signPage.html',{"url":im,"num":i,"number":j})
 def sign(request):
-    imgpath = 'E:/PycharmProjects/CRS/static/images'
+    imgpath =os.path.join(settings.BASE_DIR, 'static/images')
     new_imgpath = 'E:/pictures/'
     jsonpath = './gt'
     new_jsonpath = './new_json'
