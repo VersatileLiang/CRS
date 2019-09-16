@@ -4,4 +4,5 @@ import sign.views
 
 urlpatterns = [
     path('',sign.views.index,),
+    path('sign',sign.views.sign)
 ]
