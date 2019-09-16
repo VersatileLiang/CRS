@@ -1,0 +1,6 @@
+1.运行imc文件夹下的py程序
+2.运行pachong0.py爬取指定的数据，用作训练
+3.运行retrain.bat批处理程序训练出来模型
+4.运行pachong1.py随机爬取几类数据作为测试
+5.运行test.py测试图像分类的准确性
+详细请前往原参考网址：https://www.cnblogs.com/felixwang2/p/9234198.html
