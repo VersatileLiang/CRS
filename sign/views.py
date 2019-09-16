@@ -19,7 +19,7 @@ def index(request):
             print('OSError, Path:', imgpath)
     return render(request, 'sign/signPage.html',{"url":im,"num":i,"number":j})
 def sign(request):
-    imgpath = 'D:/CRS-master/CRS-master/static/images'
+    imgpath = 'E:/PycharmProjects/CRS/static/images'
     new_imgpath = 'E:/pictures/'
     jsonpath = './gt'
     new_jsonpath = './new_json'
