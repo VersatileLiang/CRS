@@ -13,7 +13,7 @@ from CarrierRecognitionSystem import settings
 def index(request):
     i = 0
     j=0
-    imgpath = 'D:/CRS-master/CRS-master/static/images'
+    imgpath = os.path.join(settings.BASE_DIR, 'static/images')
     for root, dirs, files in os.walk(imgpath):
         try:
             im = files[i]

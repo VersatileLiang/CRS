@@ -58,4 +58,5 @@ def reptile(request):
                 if num >= numPicture:
                     break
             t = t + 60
-    return render(request, 'reptile/reptilePage.html')
+    word="爬取成功"
+    return render(request, 'reptile/reptilePage.html',{"message":word})
