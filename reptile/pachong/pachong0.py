@@ -61,7 +61,7 @@ def dowmloadPicture(html, keyword):
 
 if __name__ == '__main__':  # 主函数入口
     datetime = time.strftime('%Y.%m.%d-%H',time.localtime(time.time()))
-    word = input("请输入搜索关键词(可以是人名，地名等): ")
+    word = 'chuanbo' # input("请输入搜索关键词(可以是人名，地名等): ")
     # add = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=%E5%BC%A0%E5%A4%A9%E7%88%B1&pn=120'
     url = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=' + '船舶' + '&pn='
     tot = Find(url)
@@ -70,7 +70,7 @@ if __name__ == '__main__':  # 主函数入口
     numPicture = int(input('请输入想要下载的图片数量 '))
 
     # file ='picture/' + word + '-' + datetime
-    path = 'images' # + '/' + word + '-' + datetime
+    path = 'img' + '/' + word # + '-' + datetime
     if os.path.exists(path)==0:
         os.makedirs(path)
     file = path
@@ -90,3 +90,35 @@ if __name__ == '__main__':  # 主函数入口
             t = t + 60
 
     print('当前搜索结束，感谢使用，图片已经下载到当前目录下picture文件夹')
+
+    datetime = time.strftime('%Y.%m.%d-%H',time.localtime(time.time()))
+    word = 'hangmu' # input("请输入搜索关键词(可以是人名，地名等): ")
+    # add = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=%E5%BC%A0%E5%A4%A9%E7%88%B1&pn=120'
+    url = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=' + '航母' + '&pn='
+    tot = Find(url)
+    # Recommend = recommend(url)  # 记录相关推荐
+    print('经过检测%s类图片共有%d张' % (word, tot))
+    numPicture = int(input('请输入想要下载的图片数量 '))
+
+    # file ='picture/' + word + '-' + datetime
+    path = 'img' + '/' + word # + '-' + datetime
+    if os.path.exists(path)==0:
+        os.makedirs(path)
+    file = path
+    y = os.path.exists(file)
+    t = 0
+    tmp = url
+    while t < numPicture:
+        try:
+            url = tmp + str(t)
+            result = requests.get(url, timeout=10)
+            print(url)
+        except error.HTTPError as e:
+            print('网络错误，请调整网络后重试')
+            t = t + 60
+        else:
+            dowmloadPicture(result.text, word)
+            t = t + 60
+
+    print('当前搜索结束，感谢使用，图片已经下载到当前目录下picture文件夹')
+

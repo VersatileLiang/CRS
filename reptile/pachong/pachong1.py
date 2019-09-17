@@ -159,9 +159,12 @@ def get_file_count(path, type):
 
 # 获取所需的图片
 def get_needs_imgs(imgs_needs, img_type):
-    tran_img_type = str(translate(img_type, 'en')).lower()  # 翻译完之后所有字母小写
-
-    img_path = 'imgs/' + tran_img_type  # 图片存储路径
+    # tran_img_type = str(translate(img_type, 'en')).lower()  # 翻译完之后所有字母小写
+    if img_type == '航母':
+        tran_img_type = 'hangmu'
+    else:
+        tran_img_type = 'chuanbo'
+    img_path = 'images/' + tran_img_type  # 图片存储路径
     mkdir(img_path)  # 创建文件夹
 
     img_pg = 0  # 30的倍数
@@ -190,8 +193,8 @@ def main(img_type):
     get_needs_imgs(imgs_needs=imgs_needs, img_type=img_type)
 
 
-imgs_needs = 80  # 需要多少张图片
-img_types = ['汽车','兔子','吉他','房子']  # 需要什么图片
+imgs_needs = 5  # 需要多少张图片
+img_types = ['船舶','航母']  # 需要什么图片
 # get_needs_imgs(imgs_needs, img_type)
 
 
