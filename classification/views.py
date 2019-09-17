@@ -47,6 +47,7 @@ def a_index(request):
                 line = line.strip('\n')
                 uid_to_human[uid] = line
 
+            path = 'C:/Users/hasee/Desktop/CRS/classification/upload/'
             # 创建一个图来存放google训练好的模型
             with tf.gfile.FastGFile('C:/Users/hasee/Desktop/CRS/classification/output_graph.pb', 'rb') as f:  # 读取模型
                 graph_def = tf.GraphDef()
@@ -60,7 +61,6 @@ def a_index(request):
             with tf.Session() as sess:
                 softmax_tensor = sess.graph.get_tensor_by_name('final_result:0')
                 # 遍历目录
-                path = 'C:/Users/hasee/Desktop/CRS/classification/upload/'
                 for root, dirs, files in os.walk('C:/Users/hasee/Desktop/CRS/classification/upload/'):  # 存放需要测试的图片的路径
                     for file in files:
                         # 载入图片

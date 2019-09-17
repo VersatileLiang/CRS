@@ -14,6 +14,7 @@ List = []
 # Create your views here.
 def index(request):
     return render(request, 'reptile/reptilePage.html')
+
 def reptile(request):
     word = request.POST.get("dataOrigin")
     # add = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=%E5%BC%A0%E5%A4%A9%E7%88%B1&pn=120'

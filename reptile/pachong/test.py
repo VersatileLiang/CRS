@@ -39,7 +39,7 @@ with tf.Session() as sess:
 
             #打印图片路径及名称
             image_path = os.path.join(root,file)
-            print(image_path)
+            #print(image_path)
             #显示图片
             img=Image.open(image_path)
             plt.imshow(img)
@@ -48,11 +48,12 @@ with tf.Session() as sess:
 
             #排序
             top_k = predictions.argsort()[::-1]
-            print(top_k)
+            # print(top_k)
             for node_id in top_k:
                 #获取分类名称
                 human_string = id_to_string(node_id)
                 #获取该分类的置信度
                 score = predictions[node_id]
                 print('%s (score = %.5f)' % (human_string, score))
-            print()
+                break
+            #print()

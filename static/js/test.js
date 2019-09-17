@@ -162,7 +162,7 @@ var params = {
 					html = html + '<div id="uploadList_'+ i +'" class="upload_append_list"><p><strong>' + file.name + '</strong>'+ 
 						'<a href="javascript:" class="upload_delete" title="删除" data-index="'+ i +'">删除</a><br />' +
 						'<img name = "docfile" id="uploadImage_' + i + '" src="' + e.target.result + '" class="upload_image" /></p>'+
-						'<span id="uploadProgress_' + i + '" class="upload_progress">'+'<p>Analyse</p><span></span>'+'<span></span>'+'<span></span>'+'</span>' +
+						'<span id="uploadProgress_' + i + '" class="upload_progress">'+'<p>分析中</p><span></span>'+'<span></span>'+'<span></span>'+'</span>' +
 					'</div>'+'<div id="result" class="upload_result"></div>';
 					
 					i++;
@@ -200,9 +200,9 @@ var params = {
 	},
 	onProgress: function(file, loaded, total) {
 		eleProgress = $("#uploadProgress_" + file.index);
-		// eleProgress.show().html("Analyse");
+		// eleProgress.show().html("分析中");
         eleProgress.show();
-		// $("#uploadProgress_" + file.index).append("<span>Analyse</span>")
+		// $("#uploadProgress_" + file.index).append("<span>分析中</span>")
 	},
 	onSuccess: function(file, response) {
 		$("#result").append(response);

@@ -29,9 +29,8 @@
     <form class="layui-form" action="" style="width: 1000px; margin: 0 auto; margin-top: 100px">
       <div class="layui-tab">
         <ul class="layui-tab-title">
-          <li class="layui-this">算法1</li>
-          <li>算法2</li>
-          <li>算法3</li>
+          <li class="layui-this">inception_v3</li>
+          <li>CUDA+Cudnn</li>
         </ul>
         <div class="layui-tab-content">
           <div class="layui-tab-item layui-show">
@@ -39,33 +38,39 @@
               <br/><br/>
               <label class="layui-form-label">准确率</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示准确率" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="历史准确率：92.12%" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">时间</label>
+              <label class="layui-form-label">训练时间</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示时间" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="历史时间：183.15s" autocomplete="off"
+                  class="layui-input">
+              </div>
+                <br/><br/>
+              <label class="layui-form-label">分类时间</label>
+              <div class="layui-input-block">
+                <input type="text" name="time" required lay-verify="required" placeholder="历史时间：35.77s" autocomplete="off"
                   class="layui-input">
               </div>
             </div>
             <div style="width: 300px; height: 200px; float: left;margin-left: 20px;">
               <br/><br/>
-              <label class="layui-form-label">参数1</label>
+              <label class="layui-form-label">训练次数</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数1" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">参数2</label>
+              <label class="layui-form-label">训练图片数量</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数2" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">参数3</label>
+              <label class="layui-form-label">测试图片数量</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数3" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
             </div>
@@ -75,69 +80,39 @@
               <br/><br/>
               <label class="layui-form-label">准确率</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示准确率" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="历史准确率：92.18%" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">时间</label>
+              <label class="layui-form-label">训练时间</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示时间" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="历史时间：303.75s" autocomplete="off"
                   class="layui-input">
               </div>
-            </div>
-            <div style="width: 300px; height: 200px; float: left;margin-left: 20px;">
-              <br/><br/>
-              <label class="layui-form-label">参数1</label>
+                <br/><br/>
+              <label class="layui-form-label">分类时间</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数1" autocomplete="off"
-                  class="layui-input">
-              </div>
-              <br/><br/>
-              <label class="layui-form-label">参数2</label>
-              <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数2" autocomplete="off"
-                  class="layui-input">
-              </div>
-              <br/><br/>
-              <label class="layui-form-label">参数3</label>
-              <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数3" autocomplete="off"
-                  class="layui-input">
-              </div>
-            </div>
-          </div>
-          <div class="layui-tab-item">
-            <div style="width: 400px; height: 200px;float: left;">
-              <br/><br/>
-              <label class="layui-form-label">准确率</label>
-              <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示准确率" autocomplete="off"
-                  class="layui-input">
-              </div>
-              <br/><br/>
-              <label class="layui-form-label">时间</label>
-              <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="显示时间" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="历史时间：98.80s" autocomplete="off"
                   class="layui-input">
               </div>
             </div>
             <div style="width: 300px; height: 200px; float: left;margin-left: 20px;">
               <br/><br/>
-              <label class="layui-form-label">参数1</label>
+              <label class="layui-form-label">训练次数</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数1" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">参数2</label>
+              <label class="layui-form-label">训练图片数量</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数2" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
               <br/><br/>
-              <label class="layui-form-label">参数3</label>
+              <label class="layui-form-label">测试图片数量</label>
               <div class="layui-input-block">
-                <input type="text" name="time" required lay-verify="required" placeholder="请输入参数3" autocomplete="off"
+                <input type="text" name="time" required lay-verify="required" placeholder="100" autocomplete="off"
                   class="layui-input">
               </div>
             </div>
