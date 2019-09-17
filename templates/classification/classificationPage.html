@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>分类</title>
+  <link rel="stylesheet" href="/static/style/style.css" />
   <link rel="stylesheet" href="../../static/layui/css/layui.css" />
-  <script src="../../static/layui/layui.js"></script>
-  <script src="../../static/jquery/jquery-3.3.1.min.js"></script>
-  <script src="../../static/layer/layer.js"></script>
 </head>
 <body>
+
   <ul class="layui-nav" lay-filter="" style="text-align: center">
     <li class="layui-nav-item"><a href="/reptile">爬虫</a></li>
     <li class="layui-nav-item"><a href="/sign">标记</a></li>
@@ -22,60 +21,31 @@
         </dl>
       </li>
   </ul>
-  
-  <div class="center" style="width: 1200px; height: 500px;margin: 0 auto;">
-    <form class="layui-form" action="" style="width: 500px; margin: 0 auto; margin-top: 50px" >
-      <div class="layui-form-item">
-        <div class="layui-upload">
-          <input type="text" name="time" required  lay-verify="required" placeholder="显示路径" autocomplete="off" class="layui-input layui-input-inline">
-          <button type="button" class="layui-btn" id="test1"><i class="layui-icon"></i>上传图片</button>
-        </div>  
-        <div class="layui-upload-list">
-          <img class="layui-upload-img" id="demo1" style="width:400px; height: 300px;">
+
+<div id="main">
+    <div id="body" class="light">
+    	<div id="content" class="show">
+            <div class="demo">
+            	<form id="uploadForm" action="/classification/index" method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <div class="upload_box">
+                        <div class="upload_main">
+                            <div class="upload_choose">
+                                <input id="fileImage" type="file" size="30" name="fileselect[]" multiple />
+                                <span id="fileDragArea" class="upload_drag_area">或者将图片拖到此处</span>
+                            </div>
+                            <div id="preview" class="upload_preview"></div>
+                        </div>
+                        <div class="upload_submit">
+                            <button type="button" id="fileSubmit" class="upload_submit_btn">确认上传图片</button>
+                        </div>
+                        <div id="uploadInf" class="upload_inf"></div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-      <div class="layui-form-item">
-        <label class="layui-form-label" style="font-size: 20px;width: 200px;">这是什么类</label>
-      </div>
-    </form>
-    
-  </div>
-
-  
-<script src="layui/layui.js"></script>
-<script>
-layui.use('upload', function () {
-  var $ = layui.jquery
-      , upload = layui.upload;
-
-  //普通图片上传
-  var uploadInst = upload.render({
-      elem: '#test1'
-      , url: 'imageUpload'
-      , before: function (obj) {
-          //预读本地文件示例，不支持ie8
-          obj.preview(function (index, file, result) {
-              $('#demo1').attr('src', result); //图片链接（base64）
-          });
-      }
-      , done: function (res) {
-          //如果上传失败
-          if (res.code > 0) {
-              return layer.msg('上传失败');
-          }
-          //上传成功
-      }
-      , error: function () {
-          //演示失败状态，并实现重传
-          var demoText = $('#demoText');
-          demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
-          demoText.find('.demo-reload').on('click', function () {
-              uploadInst.upload();
-          });
-      }
-  });
-
-});
-</script>
+    </div>
+</div>
+    <script src="http://libs.baidu.com/jquery/1.4.4/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/test.js"></script>
 </body>
 </html>

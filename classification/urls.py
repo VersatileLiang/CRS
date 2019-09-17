@@ -4,4 +4,5 @@ import classification.views
 
 urlpatterns = [
     path('',classification.views.index,),
+    path('index', classification.views.a_index, name='index'),
 ]

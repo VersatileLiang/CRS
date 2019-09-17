@@ -38,6 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'algorithm',
+    'CarrierRecognitionSystem',
+    'classification',
+    'index',
+    'login',
+    'reptile',
+    'sign',
 ]
 
 MIDDLEWARE = [
