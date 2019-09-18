@@ -22,7 +22,7 @@ def reptile(request):
     # tot = Find(url)
     # Recommend = recommend(url)  # 记录相关推荐
     # print('经过检测%s类图片共有%d张' % (word, tot))
-    numPicture =20
+    numPicture =10
     file =os.path.join(settings.BASE_DIR, 'static/images')
     y = os.path.exists(file)
     t = 0

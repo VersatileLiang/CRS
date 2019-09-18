@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
   <title>标记</title>
@@ -35,8 +35,10 @@
           </div>
       </div>
       <div class="layui-form-item">
+          <p th:if="${j==100}" th:text="全部标记成功"></p>
         <img src="../../static/images/{{ url }}" style="width: 400px; height:300px;"/>
           <input name="number1"  style="display: none" value={{ num }}>
+          <input name="number2"  style="display: none" value={{ num2 }}>
       </div>
       <div class="layui-form-item">
         <button type="submit" class="layui-btn layui-btn-radius" style="margin-left: 160px;" >确认</button>
@@ -61,9 +63,6 @@ layui.use('form', function(){
     return false;
   });
 });
-
-</script>
-<script>
 
 </script>
 

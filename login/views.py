@@ -10,4 +10,8 @@ def login_success(request):
     if(name=="admin"):
         if(password=="admin"):
             return render(request, 'reptile/reptilePage.html')
+        else:
+            return render(request, 'login/login.html')
+    else:
+        return render(request, 'login/login.html')
 

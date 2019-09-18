@@ -3,7 +3,7 @@ var ZXXFILE = {
     fileInput: null,                //html file控件
     dragDrop: null,                 //拖拽敏感区域
     upButton: null,                 //提交按钮
-    url: "/classification/index",         //ajax地址
+    url: "",         //ajax地址
     fileFilter: [],                 //过滤后的文件数组
     filter: function(files) {      //选择文件组的过滤方法
         return files;   
